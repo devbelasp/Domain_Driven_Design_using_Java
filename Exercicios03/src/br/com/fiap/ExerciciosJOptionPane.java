@@ -52,7 +52,7 @@ public class ExerciciosJOptionPane {
         try {
             auxiliar = JOptionPane.showInputDialog("Digite o valor do raio de um círculo em cm");
             raioDoCirculo = Double.parseDouble(auxiliar);
-            areaDoCirculo = Math.PI * (raioDoCirculo * raioDoCirculo);
+            areaDoCirculo = Math.PI * Math.pow(raioDoCirculo, 2);
             JOptionPane.showMessageDialog(null,"O valor da área deste círculo é de " + areaDoCirculo + " cm²");
 
         } catch (Exception e) {

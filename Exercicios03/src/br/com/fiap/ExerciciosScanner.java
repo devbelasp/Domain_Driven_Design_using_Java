@@ -61,7 +61,7 @@ public class ExerciciosScanner {
             System.out.println("Descobrindo o valor da área do círculo");
             System.out.print("Digite o valor do raio de um círculo em cm: ");
             raioDoCirculo = scan.nextDouble();
-            areaDoCirculo = Math.PI * (raioDoCirculo * raioDoCirculo);
+            areaDoCirculo = Math.PI * Math.pow(raioDoCirculo,2);
             System.out.println("A área deste círculo é de: " + areaDoCirculo + "cm²");
 
         } catch (Exception e) {
