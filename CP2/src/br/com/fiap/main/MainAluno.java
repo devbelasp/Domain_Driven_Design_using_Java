@@ -3,8 +3,8 @@ package br.com.fiap.main;
 import br.com.fiap.bean.Aluno;
 
 import javax.swing.*;
+
 import java.time.LocalDate;
-import java.util.Scanner;
 
 public class MainAluno {
     public static void main(String[] args) {
