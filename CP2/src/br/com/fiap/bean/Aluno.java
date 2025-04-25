@@ -10,7 +10,7 @@ public class Aluno {
     // construtor vazio
     public Aluno() {
     }
-    // construtor com parâmetro
+    // construtor com parâmetros
     public Aluno(int resgistroMatricula, String nomeCompleto, int anoDeNascimento) {
         setResgistroMatricula(resgistroMatricula);
         this.nomeCompleto = nomeCompleto;
