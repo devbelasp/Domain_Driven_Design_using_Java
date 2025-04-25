@@ -27,7 +27,6 @@ public class Aluno {
             } else {
                 throw new Exception("Número de matrícula inválido!(min=80000 até max=599999)");
             }
-
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
