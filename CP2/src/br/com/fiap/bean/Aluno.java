@@ -7,13 +7,14 @@ public class Aluno {
     private int resgistroMatricula;
     private String nomeCompleto;
     private int anoDeNascimento;
-    // construtores
+    // construtor vazio
     public Aluno() {
     }
+    // construtor com parâmetro
     public Aluno(int resgistroMatricula, String nomeCompleto, int anoDeNascimento) {
-        this.resgistroMatricula = resgistroMatricula;
+        setResgistroMatricula(resgistroMatricula);
         this.nomeCompleto = nomeCompleto;
-        this.anoDeNascimento = anoDeNascimento;
+        setAnoDeNascimento(anoDeNascimento);
     }
     // métodos getters e setters
     public int getResgistroMatricula() {
@@ -41,20 +42,21 @@ public class Aluno {
         return anoDeNascimento;
     }
     public void setAnoDeNascimento(int anoDeNascimento) {
-        LocalDate dataAtual = LocalDate.now();
+        int anoAtual = LocalDate.now().getYear();
         try {
-            if (anoDeNascimento >= 1945 && anoDeNascimento <= dataAtual.getYear()) {
+            if (anoDeNascimento >= 1945 && anoDeNascimento <= anoAtual) {
                 this.anoDeNascimento = anoDeNascimento;
             } else {
-                throw new Exception("Valor inválido! (min=1945 até max=Ano Atual)");
+                throw new Exception("Ano de nascimento inválido! (min=1945 até max=Ano Atual)");
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
     // métodos de classe (particulares)
-    public int calcularIdade (int anoAtual) {
-        return anoAtual - anoDeNascimento;
+    public int calcularIdade (LocalDate dataAtual) {
+        return dataAtual.getYear() - anoDeNascimento;
+
     }
 
 }
