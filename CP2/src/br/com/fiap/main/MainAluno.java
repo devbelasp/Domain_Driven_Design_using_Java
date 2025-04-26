@@ -1,3 +1,7 @@
+// RM: 562019 | Nome: Felipe Monte de Sousa
+// RM: 563422 | Nome: Isabela dos Santos Pinto
+// RM: 564887 | Nome: Manuela de Lacerda Soares
+
 package br.com.fiap.main;
 
 import br.com.fiap.bean.Aluno;
