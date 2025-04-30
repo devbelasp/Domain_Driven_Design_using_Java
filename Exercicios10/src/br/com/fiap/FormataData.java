@@ -8,20 +8,33 @@ import java.time.format.DateTimeFormatter;
 public class FormataData {
     public static void main(String[] args) {
         try {
-            //LocalDate dataInicial = LocalDate.parse("1998-06-24");
-            //LocalDate dataFinal = LocalDate.now();
-            String dataInicial = JOptionPane.showInputDialog("Digite data inicial: dd/MM/yyyy");
-            dataInicial.substring()
+            // data inicial
+            String dataInicial = JOptionPane.showInputDialog("Digite data inicial (ex: dd/MM/yyyy)");
+            String dia = dataInicial.substring(0,2);
+            String mes = dataInicial.substring(3,4);
+            String ano = dataInicial.substring(5,8);
+            String dataI = ano+"/"+mes+"/"+dia;
+            // data final
+            String dataFinal = JOptionPane.showInputDialog("Digite data final (ex: dd/MM/yyyy)");
+            String dia1 = dataFinal.substring(0,2);
+            String mes1 = dataFinal.substring(3,4);
+            String ano1 = dataFinal.substring(5,8);
+            String dataF = ano1+"/"+mes1+"/"+dia1;
 
+            // transformando em data
+            LocalDate dataInicial2 = LocalDate.parse(dataI);
+            LocalDate dataFinal2 = LocalDate.parse(dataF);
+            JOptionPane.showMessageDialog(null,dataI);
+            JOptionPane.showMessageDialog(null,dataF);
 
-            LocalDate dataInicial2 = LocalDate.parse(dataInicial);
-
-            Period period = Period.between(dataInicial, dataFinal);
+            // período entre datas
+            //Period period = Period.between(dataInicial2, dataFinal2);
             //DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-            //String resultado = String.format("Data inicial: %s \nData final: %s \nEntre as datas fornecidas existem %d ano(s), %d mês(s) e %d dia(s)!", dataInicial.format(dtf), dataFinal.format(dtf), period.getYears(), period.getMonths(), period.getDays());
+            // mostransdo resultado
+            //String resultado = String.format("Data inicial: %s \nData final: %s \nEntre as datas fornecidas existem %d ano(s), %d mês(s) e %d dia(s)!", dataInicial2.format(dtf), dataFinal2.format(dtf), period.getYears(), period.getMonths(), period.getDays());
 
-            JOptionPane.showMessageDialog(null, resultado);
+           // JOptionPane.showMessageDialog(null, resultado);
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null,"Valor inválido!");
