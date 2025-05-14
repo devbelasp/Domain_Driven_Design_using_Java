@@ -15,7 +15,8 @@ public class ContaPoupanca extends ContaBancaria{
     }
     // métodos da classe (particulares)
     public float novoSaldo(float rendimento) {
-        float result = rendimento / 100 * super.getSaldo();
-        return result + super.getSaldo();
+        float novoSaldo = super.getSaldo() * (1 + rendimento / 100);
+        super.setSaldo(novoSaldo);
+        return super.getSaldo();
     }
 }

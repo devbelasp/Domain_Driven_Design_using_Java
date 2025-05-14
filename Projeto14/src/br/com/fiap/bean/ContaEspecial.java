@@ -17,12 +17,13 @@ public class ContaEspecial extends ContaBancaria{
     }
     // métodos da classe (particulares)
     public float sacar (float valor) {
-        float resultado = 0;
-        if (valor <= super.getSaldo() + limite) {
-            resultado = super.getSaldo() - valor;
+        float novoSaldo = super.getSaldo();
+        if (valor <= (super.getSaldo() + limite)) {
+            novoSaldo = super.getSaldo() - valor;
         } else {
-            JOptionPane.showMessageDialog(null, "Número do saque está maior que o limite.");
+            JOptionPane.showMessageDialog(null, "Valor superior ao seu limite atual");
         }
-        return resultado;
+        super.setSaldo(novoSaldo);
+        return super.getSaldo();
     }
 }

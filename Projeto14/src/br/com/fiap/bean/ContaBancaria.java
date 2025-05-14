@@ -31,14 +31,16 @@ public class ContaBancaria {
     }
     // métodos da classe (particulares)
     public float sacar(float valor) {
-        if (saldo >= valor) {
-            saldo = getSaldo() - valor;
+        float novoSaldo = saldo;
+        if (valor <= saldo) {
+            novoSaldo = saldo - valor;
         } else{
-            JOptionPane.showMessageDialog(null, "Número do saque não pode ser maior que o valor do saldo na conta.");
+            JOptionPane.showMessageDialog(null, "Valor superior ao seu saldo atual");
         }
+        saldo = novoSaldo;
         return saldo;
     }
     public float depositar (float valor){
-        return valor + saldo;
+        return saldo += valor;
     }
 }
