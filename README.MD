@@ -1,4 +1,4 @@
-# 🖥️ Domain Driven Design using Java - FIAP
+# 🖥️ Domain Driven Design using Java 1º Semestre - FIAP
  
 ## 📌 Sobre a disciplina
 
